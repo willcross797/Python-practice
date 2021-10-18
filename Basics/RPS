@@ -1,0 +1,18 @@
+import random
+
+CHOICES = ["Rock", "Paper", "Scissors"]
+
+print("Make your throw")
+
+user_choice = input(" Type Rock, Paper, or Scissors: ")
+
+if user_choice in CHOICES:
+    computer_choice = random.choice(CHOICES)
+    if (user_choice == "Rock" and computer_choice == "Rock")  or (user_choice == "Paper" and computer_choice == "Paper")  or (user_choice == "Scissors" and computer_choice == "Scissors"):  a = "It was a draw!"
+    elif (user_choice == "Rock" and computer_choice =="Scissors")  or (user_choice == "Scissors" and computer_choice =="Paper")  or (user_choice == "Paper" and computer_choice =="Rock"): a = "User wins!"
+    elif (user_choice == "Rock" and computer_choice =="Paper") or (user_choice == "Paper" and computer_choice =="Scissors") or (user_choice == "Scissors" and computer_choice =="Rock"): a = "Computer wins! Unlucky mate!"
+    print(
+        f"\nYou threw '{user_choice}', the computer threw '{computer_choice}. '",a
+    )
+else:
+    print(f"\n You typed '{user_choice}' which isn't a valid throw")
